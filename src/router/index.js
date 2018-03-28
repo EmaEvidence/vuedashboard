@@ -10,13 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home,
-    },
-    {
-      path: '/dashboard',
       name: 'Dashboard',
-      component: Dashboard,
+      component: Home,
     },
   ],
 });
