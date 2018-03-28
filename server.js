@@ -9,7 +9,7 @@ const port = process.env.PORT || 8000;
 app.use('/dist', express.static(path.join(path.dirname(__dirname), './dist')));
 app.use('/static', express.static(path.join(path.dirname(__dirname), './dist/static')));
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(path.dirname(__dirname), './dist/index.html'));
 });
 
