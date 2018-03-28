@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "prestart": "cpy ./**.html ./dist",
     "start": "babel-node server.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
@@ -15,12 +16,8 @@
     "heroku-postbuild": "node build/build.js"
   },
   "dependencies": {
+    "autoprefixer": "^7.1.2",
     "babel-cli": "^6.26.0",
-    "express": "^4.16.3",
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "vuetify": "^1.0.9",
-    "vuex": "^3.0.1","autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -36,6 +33,7 @@
     "chalk": "^2.0.1",
     "chromedriver": "^2.27.2",
     "copy-webpack-plugin": "^4.0.1",
+    "cpy-cli": "^1.0.1",
     "cross-env": "^5.0.1",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
@@ -46,6 +44,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-vue": "^4.0.0",
+    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -78,16 +77,19 @@
     "sinon-chai": "^2.8.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue": "^2.5.2",
     "vue-loader": "^13.3.0",
+    "vue-router": "^3.0.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
+    "vuetify": "^1.0.9",
+    "vuex": "^3.0.1",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
